@@ -1,0 +1,16 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>页面找不到</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/common.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/error.css' %}">
+</head>
+<body>
+    <img src="{% static 'image/error_404.png' %}" alt="404找不到页面">
+    <div class="error_main"><a href="/" class="index">回到首页</a></div>
+</body>
+</html>
