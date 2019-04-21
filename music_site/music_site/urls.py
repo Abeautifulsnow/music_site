@@ -16,8 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, re_path, include
 from django.views.static import serve
-# from django.conf.urls.static import static
-from music_site.settings import MEDIA_ROOT, MEDIA_URL, STATIC_ROOT
+from music_site.settings import MEDIA_ROOT, STATIC_ROOT
 
 
 urlpatterns = [
@@ -35,6 +34,8 @@ urlpatterns = [
 ]
 
 # 或者这种方法
+# from django.conf.urls.static import static
+# from music_site.settings import MEDIA_URL, MEDIA_ROOT
 # urlpatterns += static(MEDIA_URL, document_root=MEDIA_ROOT)
 
 # 设置404，500错误状态码

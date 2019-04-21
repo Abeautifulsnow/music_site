@@ -6,8 +6,6 @@ This is a music site which you can upload music file and listen them. Enjoy your
 
 ## Configuration
 
-------------
-
 * First
     * Download this repository to local from git. Command is as follows:
 
@@ -32,7 +30,5 @@ This is a music site which you can upload music file and listen them. Enjoy your
     ```
 
 ## Issue
-
-------------
 
 Welcome to submit issue.
