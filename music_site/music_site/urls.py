@@ -39,6 +39,5 @@ urlpatterns = [
 # urlpatterns += static(MEDIA_URL, document_root=MEDIA_ROOT)
 
 # 设置404，500错误状态码
-from index import views
-handler404 = views.page_not_found
-handler500 = views.page_not_found
+handler404 = 'index.views.page_not_found'
+handler500 = 'index.views.page_not_found'
