@@ -26,13 +26,13 @@ def LoginView(request):
                 user = UserInfo.objects.filter(Q(mobile=loginuser) | Q(username=loginuser)).first()
                 if check_password(password, user.password):
                     login(request, user)
-                    return redirect('/user/home/1.html')
+                    return redirect('user/home/1.html')
                 else:
                     tips = '密码错误'
             else:
                 tips = '用户不存在'
         else:
-            user = UserInfoForm(request.POST, request=request)
+            user = UserInfoForm(request.POST)   # form表单填写POST发送的数据
             if user.is_valid():
                 user.save()
                 tips = '注册成功'
@@ -44,7 +44,7 @@ def LoginView(request):
     return render(request, 'login.html', locals())
 
 
-@login_required(login_url='user:login')
+@login_required(login_url='login')
 def HomeView(request, page):
     # 搜索歌曲
     search_song = Dynamic.objects.select_related('song').order_by('-dynamic_search').all()[:4]
